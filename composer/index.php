@@ -26,16 +26,21 @@ if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_PW'] !== $password)
             function call(func)
             {
                 $("#output").append("\nplease wait...\n");
+                $("#output").append("\n===================================================================\n");
+                $("#output").append("Executing Started");
+                $("#output").append("\n===================================================================\n");
                 $.post('main.php',
                         {
-                            "password": $("#password").val(),
                             "path":$("#path").val(),
                             "command":func,
                             "function": "command"
                         },
                 function(data)
                 {
-                    $("#output").append("done.");
+                    $("#output").append(data);
+                    $("#output").append("\n===================================================================\n");
+                    $("#output").append("Execution Ended");
+                    $("#output").append("\n===================================================================\n");
                 }
                 );
             }
@@ -85,7 +90,7 @@ if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_PW'] !== $password)
             #output
             {
                 width:100%;
-                height:200px;
+                height:350px;
                 overflow-y:scroll;
                 overflow-x:hidden;
             }
