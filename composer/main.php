@@ -68,7 +68,7 @@ function command()
     if (file_exists('extracted'))
     {
         require_once(__DIR__ . '/extracted/vendor/autoload.php');
-        $input = new Symfony\Component\Console\Input\StringInput($_POST['command'].' -vvv -d ../test');
+        $input = new Symfony\Component\Console\Input\StringInput($_POST['command'].' -vvv -d '.$_POST['path']);
 	$output = new Symfony\Component\Console\Output\StreamOutput(fopen('php://output','w'));
         $app = new Composer\Console\Application();
         $app->run($input,$output);
