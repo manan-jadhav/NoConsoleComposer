@@ -6,8 +6,8 @@ include 'password.php';
     <head>
         <title>NoConsoleComposer</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
                 check();
