@@ -20,6 +20,7 @@ function getStatus()
 
 function downloadComposer()
 {
+    putenv('COMPOSER_HOME=' . __DIR__);
     $installerURL = 'https://getcomposer.org/installer';
     $installerFile = 'installer.php';
     if (!file_exists($installerFile))
